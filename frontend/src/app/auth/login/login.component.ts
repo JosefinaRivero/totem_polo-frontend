@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { finalize } from 'rxjs/operators';
 import { RouterModule } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -292,6 +293,7 @@ export class LoginComponent implements OnInit {
   loginWithGoogle(): void {
     // Si querés, podés forzar recordar para Google:
     localStorage.setItem('remember', '1');
-    window.location.href = 'http://localhost:8000/auth/google/login';
+    const baseApi = environment.apiUrl.replace(/\/$/, '');
+    window.location.href = `${baseApi}/auth/google/login`;
   }
 }

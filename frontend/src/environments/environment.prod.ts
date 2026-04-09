@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://tu-dominio.com/api' // URL para producción
+  apiUrl: 'https://polo52.com/api' // URL para producción
 };

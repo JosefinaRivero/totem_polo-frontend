@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8000'  // ajusta a la URL de tu backend
+  // Con ROOT_PATH=/api en el backend, apuntamos al prefijo /api en local
+  apiUrl: 'http://localhost:8000/api'
 };
